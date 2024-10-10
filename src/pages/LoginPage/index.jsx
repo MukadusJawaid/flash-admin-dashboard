@@ -4,6 +4,7 @@ import classes from "./LoginPage.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { logo } from "../../config/imagePath";
 import Input from "../../components/Input";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default function LoginPage() {
   return (
