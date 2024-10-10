@@ -1,0 +1,36 @@
+.mainDiv {
+  height: 100vh;
+}
+.leftColDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: linear-gradient(180deg, #068df7 0%, #23cefdb3 100%);
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.rightColDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.inputMainDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.inputDiv {
+  width: 70% !important;
+}

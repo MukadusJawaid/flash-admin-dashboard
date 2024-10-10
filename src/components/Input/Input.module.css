@@ -1,0 +1,27 @@
+.inputDiv {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  top: -14px;
+  left: 25px;
+  font-size: 18px;
+  background-color: var(--white-color);
+  padding: 0 10px;
+  color: var(--primary-color-v2);
+  z-index: 1;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 20px 15px 15px 15px;
+  border: 2px solid var(--primary-color-v2);
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.leftIcon {
+}

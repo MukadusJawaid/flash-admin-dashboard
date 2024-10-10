@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import loadable from "@loadable/component";
+import Loader from "react-js-loader";
+
+// Loadable components for lazy loading
+const LoginPage = loadable(() => import("./pages/LoginPage"));
+const DashboardPage = loadable(() => import("./pages/DashboardPage"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense
+        fallback={
+          <Loader
+            type="spinner-circle"
+            bgColor={"#333"} // Background color for the spinner
+            color={"#fff"} // Spinner color
+            size={60}
+          />
+        }
+      >
+        <Routes>
+          {/* Define routes for LoginPage and DashboardPage */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          {/* Add a default route */}
+          <Route path="*" element={<LoginPage />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 }
 
