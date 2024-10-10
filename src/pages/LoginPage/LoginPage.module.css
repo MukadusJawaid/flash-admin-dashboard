@@ -18,12 +18,14 @@
 .rightColDiv {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  /* gap: 50px; */
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
 .inputMainDiv {
+  margin-block-start: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,4 +35,45 @@
 }
 .inputDiv {
   width: 70% !important;
+}
+.subText {
+  margin-block-start: 20px;
+  width: 70%;
+  color: var(--dark-gray-color-v2);
+  font-weight: 500;
+  text-align: end;
+  cursor: pointer;
+}
+.buttonDivClass {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .leftColDiv {
+    display: none;
+  }
+  .inputDiv,
+  .subText,
+  .buttonDivClass {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inputDiv,
+  .subText,
+  .buttonDivClass {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .inputDiv,
+  .subText,
+  .buttonDivClass {
+    width: 90% !important;
+  }
 }

@@ -17,11 +17,28 @@
 
 .input {
   width: 100%;
-  padding: 20px 15px 15px 15px;
+  padding: 20px 15px 15px 45px;
   border: 2px solid var(--primary-color-v2);
   border-radius: 10px;
   font-size: 16px;
+  color: var(--dark-gray-color-v1);
   box-sizing: border-box;
 }
 .leftIcon {
+  position: absolute;
+  color: var(--dark-gray-color-v2);
+  top: 20.5px;
+  left: 20px;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+}
+input:focus {
+  outline: 0px;
+}
+.toggleIcon {
+  cursor: pointer;
 }
