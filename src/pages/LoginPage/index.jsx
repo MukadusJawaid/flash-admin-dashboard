@@ -8,8 +8,11 @@ import { HiOutlineMail } from "react-icons/hi";
 import { useFormik } from "formik";
 import LoginSchema from "../../schema/LoginSchema";
 import Button from "../../components/Buttons";
+import { useNavigate } from "react-router";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+
   const loginFormik = useFormik({
     initialValues: {
       email: "",
@@ -18,8 +21,13 @@ export default function LoginPage() {
     validationSchema: LoginSchema,
     onSubmit: (values) => {
       console.log(values);
+      handleSubmit(values);
     },
   });
+
+  const handleSubmit = async (values) => {
+    console.log("Form Submitted", values);
+  };
 
   return (
     <div className={classes.mainDiv}>
@@ -33,33 +41,55 @@ export default function LoginPage() {
           <Col md={12} lg={6}>
             <div className={classes.rightColDiv}>
               <h1 className={"h1"}>Login</h1>
-              <div className={classes.inputMainDiv}>
-                <Input
-                  value={loginFormik?.values?.email}
-                  setValue={(val) => loginFormik.setFieldValue("email", val)}
-                  leftIcon={<HiOutlineMail size={18} />}
-                  inputDiv={classes.inputDiv}
-                  placeholder={"Email Here..."}
-                  label={"Email Id"}
-                  errorText={
-                    loginFormik?.touched?.email && loginFormik?.errors?.email
-                  }
+
+              <form
+                onSubmit={(e) => {
+                  e?.preventDefault();
+                  loginFormik.handleSubmit();
+                }}
+                className={classes.form}
+              >
+                <div className={classes.inputMainDiv}>
+                  <Input
+                    value={loginFormik?.values?.email}
+                    setValue={(val) => loginFormik.setFieldValue("email", val)}
+                    leftIcon={<HiOutlineMail size={18} />}
+                    inputDiv={classes.inputDiv}
+                    placeholder={"Email Here..."}
+                    label={"Email Id"}
+                    errorText={
+                      loginFormik?.touched?.email && loginFormik?.errors?.email
+                    }
+                  />
+                  <Input
+                    type={"password"}
+                    value={loginFormik?.values?.password}
+                    setValue={(val) =>
+                      loginFormik.setFieldValue("password", val)
+                    }
+                    inputDiv={classes.inputDiv}
+                    placeholder={"Password Here..."}
+                    label={"Password"}
+                    errorText={
+                      loginFormik?.touched?.password &&
+                      loginFormik?.errors?.password
+                    }
+                  />
+                </div>
+                <span
+                  className={classes.subText}
+                  onClick={() => navigate(`/forgot-password`)}
+                >
+                  Forgot Password?
+                </span>
+
+                <Button
+                  type="submit"
+                  label={"Submit"}
+                  variant={"primary"}
+                  buttonDivClass={classes.buttonDivClass}
                 />
-                <Input
-                  type={"password"}
-                  value={loginFormik?.values?.password}
-                  setValue={(val) => loginFormik.setFieldValue("password", val)}
-                  inputDiv={classes.inputDiv}
-                  placeholder={"Password Here..."}
-                  label={"Password"}
-                />
-              </div>
-              <span className={classes.subText}>Forgot Password?</span>
-              <Button
-                label={"Submit"}
-                variant={"primary"}
-                buttonDivClass={classes.buttonDivClass}
-              />
+              </form>
             </div>
           </Col>
         </Row>

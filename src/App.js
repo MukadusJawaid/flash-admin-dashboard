@@ -6,6 +6,8 @@ import Loader from "react-js-loader";
 // Loadable components for lazy loading
 const LoginPage = loadable(() => import("./pages/LoginPage"));
 const DashboardPage = loadable(() => import("./pages/DashboardPage"));
+const ForgotPasswordPage = loadable(() => import("./pages/ForgotPasswordPage"));
+const OTPPage = loadable(() => import("./pages/OTPPage"));
 
 function App() {
   return (
@@ -21,11 +23,10 @@ function App() {
         }
       >
         <Routes>
-          {/* Define routes for LoginPage and DashboardPage */}
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
-          {/* Add a default route */}
-          <Route path="*" element={<LoginPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/verify-otp" element={<OTPPage />} />
         </Routes>
       </Suspense>
     </Router>

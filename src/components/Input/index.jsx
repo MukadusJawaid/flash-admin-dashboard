@@ -32,8 +32,8 @@ export default function Input({
           onChange={(e) => setValue(e.target.value)}
           value={value}
           className={[classes.input, inputClass].join(" ")}
-          onError={errorText}
         />
+        {errorText && <p className={classes.errorText}>{`${errorText}*`}</p>}
         {leftIcon && <div className={classes.leftIcon}>{leftIcon}</div>}
 
         {type === "password" && (

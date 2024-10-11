@@ -13,3 +13,8 @@
   color: var(--white-color);
   border: none;
 }
+.button[color-variant="primary-outlined"] {
+  border: 2px solid var(--primary-color-v2);
+  color: var(--primary-color-v2);
+  background: transparent;
+}

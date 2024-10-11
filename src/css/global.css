@@ -16,6 +16,8 @@ body {
 
   --white-color: #ffffff;
   --black-color: #000000;
+
+  --error-text-color: #ed4337;
 }
 h1,
 h2,
@@ -28,10 +30,17 @@ label,
 span,
 p {
   font-family: "Roboto", serif;
+  margin-bottom: 0px !important;
 }
 
 .h1 {
   font-size: 64px !important;
+  color: var(--primary-color) !important;
+  font-weight: 700 !important;
+}
+
+.h2 {
+  font-size: 50px !important;
   color: var(--primary-color) !important;
   font-weight: 700 !important;
 }
