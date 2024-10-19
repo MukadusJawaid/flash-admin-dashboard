@@ -45,6 +45,32 @@ p {
   font-size: 50px !important;
 }
 
+.colored-toast.swal2-icon-success {
+  background-color: #80b462 !important;
+}
+
+.colored-toast.swal2-icon-error {
+  background-color: #fb5f5f !important;
+}
+
+.colored-toast.swal2-icon-warning {
+  background-color: #fbb16f !important;
+}
+
+.colored-toast.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+  background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title,
+.colored-toast .swal2-close,
+.colored-toast .swal2-html-container {
+  color: var(--white-color);
+}
+
 @media screen and (max-width: 1200px) {
   .h1 {
     font-size: 62px !important;

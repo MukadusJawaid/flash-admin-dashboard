@@ -3,12 +3,12 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { HiOutlineMail } from "react-icons/hi";
 
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Buttons";
 import Input from "../../components/Input";
-import { ForgotPasswordImage, logo } from "../../config/imagePath";
+import { ForgotPasswordImage } from "../../config/imagePath";
 import ForgotPasswordSchema from "../../schema/ForgotPasswordSchema";
 import classes from "./ForgotPasswordPage.module.css";
-import { useNavigate } from "react-router-dom";
 
 export default function ForgotPasswordPage() {
   const navigate = useNavigate();
@@ -26,6 +26,7 @@ export default function ForgotPasswordPage() {
 
   const handleSubmit = async (values) => {
     console.log("Form Submitted", values);
+    navigate("/verify-otp", { state: { email: values?.email } });
   };
 
   return (
