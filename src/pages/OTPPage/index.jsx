@@ -34,10 +34,10 @@ export default function OTPPage() {
 
   useEffect(() => {
     if (!email) {
-      navigate("/forgot-password");
+      navigate("/");
       return Toasts({
         type: "error",
-        message: "Please Provide  Email To Proceed",
+        message: "Email is required.",
       });
     }
   }, []);
