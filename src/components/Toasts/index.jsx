@@ -1,6 +1,5 @@
-import React from "react";
-import Swal from "sweetalert2";
 import "animate.css";
+import Swal from "sweetalert2";
 
 const Toast = Swal.mixin({
   toast: true,

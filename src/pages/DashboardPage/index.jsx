@@ -1,7 +1,11 @@
 import React from "react";
 
-import classes from "./DashboardPage.module.css";
+import AfterLoginHeader from "../../components/AfterLoginHeader";
 
 export default function DashboardPage() {
-  return <div></div>;
+  return (
+    <div>
+      <AfterLoginHeader></AfterLoginHeader>
+    </div>
+  );
 }

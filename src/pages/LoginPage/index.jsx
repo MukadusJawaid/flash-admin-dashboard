@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { VscLock } from "react-icons/vsc";
 import classes from "./LoginPage.module.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -26,8 +26,23 @@ export default function LoginPage() {
   });
 
   const handleSubmit = async (values) => {
+    navigate("/dashboard");
     console.log("Form Submitted", values);
   };
+
+  useEffect(() => {
+    const handleEnterKeyPress = (event) => {
+      if (event?.key === "Enter") {
+        loginFormik.handleSubmit();
+      }
+    };
+
+    document.addEventListener("keydown", handleEnterKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleEnterKeyPress);
+    };
+  }, [loginFormik]);
 
   return (
     <div className={classes.mainDiv}>

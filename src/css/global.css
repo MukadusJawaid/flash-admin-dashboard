@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,14 +17,18 @@ body {
   --black-color: #000000;
 
   --error-text-color: #ed4337;
+  --notification-count-bg-color: #f44336;
 }
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 0px !important;
 }
+
 label,
 span,
 p {
@@ -69,6 +72,10 @@ p {
 .colored-toast .swal2-close,
 .colored-toast .swal2-html-container {
   color: var(--white-color);
+}
+
+.cp {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {

@@ -17,18 +17,28 @@ function App() {
         fallback={
           <Loader
             type="spinner-circle"
-            bgColor={"#333"} // Background color for the spinner
-            color={"#fff"} // Spinner color
+            bgColor={"#333"}
+            color={"var(--white-color)"}
             size={60}
           />
         }
       >
         <Routes>
+          {/********************************* AUTH PAGES *********************************/}
+
           <Route path="/" element={<LoginPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/verify-otp" element={<OTPPage />} />
           <Route path="/new-password" element={<NewPasswordPage />} />
+
+          {/********************************* AUTH PAGES *********************************/}
+
+          {/********************************* AFTER LOGIN PAGES **************************/}
+
+          <Route path="/dashboard" element={<DashboardPage />} />
+
+          {/********************************* AFTER LOGIN PAGES **************************/}
         </Routes>
       </Suspense>
     </Router>

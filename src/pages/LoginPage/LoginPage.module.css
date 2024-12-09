@@ -1,5 +1,6 @@
 .mainDiv {
   height: 100vh;
+  background-color: var(--white-color);
 }
 .leftColDiv {
   height: 100vh;
