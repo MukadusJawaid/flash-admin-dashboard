@@ -98,19 +98,21 @@ export default function AfterLoginHeader({ children }) {
   };
 
   return (
-    <div className={classes.mainDiv}>
-      <Container fluid>
-        <Row>
-          <Col md={3}>
-            <h4 className={classes.header}>Welcome, Admin</h4>
-          </Col>
-          <Col md={6}>{renderNavData()}</Col>
-          <Col md={3} className="d-flex justify-content-end">
-            {renderUserData()}
-          </Col>
-        </Row>
-        {children}
-      </Container>
-    </div>
+    <>
+      <div className={classes.mainDiv}>
+        <Container fluid>
+          <Row>
+            <Col md={3}>
+              <h4 className={classes.header}>Welcome, Admin</h4>
+            </Col>
+            <Col md={6}>{renderNavData()}</Col>
+            <Col md={3} className="d-flex justify-content-end">
+              {renderUserData()}
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className={classes.childrenDiv}>{children}</div>
+    </>
   );
 }

@@ -154,3 +154,8 @@
 .itemList:hover {
   border-bottom: 2px solid var(--white-color);
 }
+.childrenDiv {
+  margin-block: 20px;
+  margin-inline: 20px;
+  max-height: calc(100vh - 80px);
+}
