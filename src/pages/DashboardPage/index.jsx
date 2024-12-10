@@ -11,13 +11,13 @@ export default function DashboardPage() {
       <AfterLoginHeader>
         <Container fluid>
           <Row>
-            <Col md={9}>
+            <Col md={7}>
               <LineChartComponent />
             </Col>
-            <Col md={3}>
+            <Col md={5}>
               <Row className="gy-3">
                 {STATS_DATA?.map((e, index) => (
-                  <Col md={12} key={index}>
+                  <Col md={6} key={index}>
                     <StatsCard data={e} />
                   </Col>
                 ))}
