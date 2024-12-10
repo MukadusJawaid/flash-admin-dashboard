@@ -77,6 +77,26 @@ p {
 .cp {
   cursor: pointer;
 }
+.activeStatus {
+  background-color: #80b462;
+}
+.deActiveStatus {
+  background-color: #fb5f5f;
+}
+.deActiveStatus,
+.activeStatus {
+  color: var(--white-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 
 @media screen and (max-width: 1200px) {
   .h1 {

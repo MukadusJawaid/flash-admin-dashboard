@@ -1,0 +1,30 @@
+.tableDiv {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #068df7d1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #068df7 0%, #23cefdb3 100%);
+  color: var(--white-color);
+}
+thead {
+  border-top: 1px solid #23cefd57;
+  border-left: 1px solid #23cefd57;
+  border-right: 1px solid #23cefd57;
+}
+td {
+  font-size: 14px;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+}
+tbody {
+  border-bottom: 1px solid #23cefd57;
+  border-left: 1px solid #23cefd57;
+  border-right: 1px solid #23cefd57;
+}

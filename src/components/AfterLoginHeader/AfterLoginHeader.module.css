@@ -157,5 +157,9 @@
 .childrenDiv {
   margin-block: 20px;
   margin-inline: 20px;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 130px);
+  overflow: auto;
+}
+.childrenDiv::-webkit-scrollbar {
+  display: none;
 }
